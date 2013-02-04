@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Javascript Assignment: Student Grades</title>
+	<meta charset="UTF-8" />
+	
+
+</head>
+	
+<body>
+	<h1>Javascript Assignment: Student Grades</h1>
+
+	<script>
+	var studentsGrades = [ 
+											["John ",90], 
+                      ["Andrea ",89], 
+                      ["Amanda ",88],
+                      ["JohnP ",87],
+                      ["Laurel ", 86],
+                      ["Zoe ",85], 
+                      ["Sarah ",84], 
+                      ["Sophia ",83 ],
+                      [ "Scott ",82], 
+                      ["Sputnik ", 81] 
+                      ];
+
+   
+   function average(data){
+    var sum=0;
+    for (var i=0; i<data.length; i++){
+      sum= sum+data [i][1]
+    };
+    return sum/data.length;
+   };
+
+  var overallAverage = average(studentsGrades);
+  console.log (overallAverage);
+
+function letterGrade(average){
+if (average < 90) {
+  return "A";
+} 
+else if (average < 80){
+  return "B";
+}
+else if (average < 70){
+  return "C";
+}
+  else if (average < 60){
+  return "D";
+}
+  else {
+  return "F";
+};
+};
+document.write("Class Average" + " " +overallAverage + "<br />");
+document.write("Class Letter Grade" + " " +letterGrade(overallAverage));
+		
+     </script>
+
+</body>
+</html>
